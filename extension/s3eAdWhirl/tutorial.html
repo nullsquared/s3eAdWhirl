@@ -1,0 +1,86 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+	<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=windows-1252">
+	<TITLE></TITLE>
+	<META NAME="GENERATOR" CONTENT="OpenOffice.org 2.4  (Win32)">
+	<META NAME="CREATED" CONTENT="20111130;17035000">
+	<META NAME="CHANGED" CONTENT="20111130;20453759">
+	<STYLE TYPE="text/css">
+	<!--
+		@page { size: 8.5in 11in; margin: 0.79in }
+		P { margin-bottom: 0.08in }
+	-->
+	</STYLE>
+</HEAD>
+<BODY LANG="en-US" DIR="LTR">
+<P STYLE="margin-bottom: 0in">s3eAdWhirl</P>
+<P STYLE="margin-bottom: 0in"><BR>
+</P>
+<P STYLE="margin-bottom: 0in">Integration</P>
+<P STYLE="margin-bottom: 0in"><BR>
+</P>
+<OL>
+	<LI><P STYLE="margin-bottom: 0in">Copy the folder <FONT FACE="Courier New, monospace">s3eAdWhirl</FONT><FONT FACE="Times New Roman, serif">
+	to </FONT><FONT FACE="Courier New, monospace">&lt;marmalade-sdk&gt;/extensions</FONT><FONT FACE="Times New Roman, serif">,
+	resulting in </FONT><FONT FACE="Courier New, monospace">&lt;marmalade-sdk&gt;/extensions/s3eAdWhirl</FONT><FONT FACE="Times New Roman, serif">.</FONT></P>
+	<LI><P STYLE="margin-bottom: 0in"><FONT FACE="Times New Roman, serif">Copy
+	the file </FONT><FONT FACE="Courier New, monospace">s3eAdWhirl/android.jar</FONT><FONT FACE="Times New Roman, serif">
+	to </FONT><FONT FACE="Courier New, monospace">&lt;marmalade-sdk&gt;/s3e/deploy/plugins/android</FONT><FONT FACE="Times New Roman, serif">,
+	resulting in </FONT><FONT FACE="Courier New, monospace">&lt;marmalade-sdk&gt;/s3e/deploy/plugins/android/android.jar</FONT><FONT FACE="Times New Roman, serif">.</FONT></P>
+	<UL>
+		<P STYLE="margin-bottom: 0in"><FONT FACE="Times New Roman, serif">By
+		default, Marmalade ships with the Android 8 API level JAR. One of
+		AdWhirl's ad networks, AdMob, requires building with the Android 13
+		API level. Keep in mind this does not restrict the Android version
+		that the application can run on &ndash; it merely changes the
+		Android version we build with.</FONT></P>
+	</UL>
+	<LI><P STYLE="margin-bottom: 0in"><FONT FACE="Times New Roman, serif">Copy
+	the files </FONT><FONT FACE="Courier New, monospace">s3eAdWhirl/AdWhirlSDK_Android_3.1.1.jar</FONT><FONT FACE="Times New Roman, serif">
+	and </FONT><FONT FACE="Courier New, monospace">s3eAdWhirl/GoogleAdMobAdsSdk-4.3.1.jar</FONT><FONT FACE="Times New Roman, serif">
+	to your project directory.</FONT></P>
+	<LI><P STYLE="margin-bottom: 0in"><FONT FACE="Times New Roman, serif">Add
+	the following three lines to the </FONT><FONT FACE="Courier New, monospace">deployments
+	{ }</FONT><FONT FACE="Times New Roman, serif"> section of your MKB:</FONT></P>
+	<UL>
+		<P STYLE="margin-bottom: 0in"><FONT FACE="Courier New, monospace">android-external-jars='GoogleAdMobAdsSdk-4.3.1.jar'</FONT></P>
+		<P STYLE="margin-bottom: 0in"><FONT FACE="Courier New, monospace">android-external-jars='AdWhirlSDK_Android_3.1.1.jar'</FONT></P>
+		<P STYLE="margin-bottom: 0in"><FONT FACE="Courier New, monospace">iphone-link-opts='-weak_framework
+		iAd'</FONT></P>
+	</UL>
+	<LI><P STYLE="margin-bottom: 0in"><FONT FACE="Courier New, monospace"><FONT FACE="Times New Roman, serif">Add
+	the following line to the </FONT><FONT FACE="Courier New, monospace">subprojects
+	{ }</FONT><FONT FACE="Times New Roman, serif"> section of your MKB:</FONT></FONT></P>
+	<UL>
+		<P STYLE="margin-bottom: 0in"><FONT FACE="Courier New, monospace">s3eAdWhirl</FONT></P>
+	</UL>
+	<LI><P STYLE="margin-bottom: 0in"><FONT FACE="Courier New, monospace"><FONT FACE="Times New Roman, serif">Create
+	a custom AndroidManifest.xml, </FONT><A HREF="http://www.madewithmarmalade.com/devnet/docs#/main/platformguides/androidguide/androiddeploymentconsiderations.html%23manifest"><FONT FACE="Times New Roman, serif">as
+	documented in the Marmalade documentation</FONT></A><FONT FACE="Times New Roman, serif">.
+	Add the following line inside the </FONT>&lt;application&gt; ...
+	&lt;/application&gt;<FONT FACE="Times New Roman, serif"> block:</FONT></FONT></P>
+	<UL>
+		<P STYLE="margin-bottom: 0in"><FONT FACE="Courier New, monospace">&lt;activity
+		android:name=&quot;com.google.ads.AdActivity&quot;
+		android:configChanges=&quot;keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize&quot;/&gt;</FONT></P>
+	</UL>
+	<LI><P STYLE="margin-bottom: 0in"><FONT FACE="Courier New, monospace"><FONT FACE="Times New Roman, serif">On
+	application startup, check whether you are running on Android or
+	iOS. This can be accomplished by calling
+	</FONT>s3eDeviceGetInt(S3E_DEVICE_OS)<FONT FACE="Times New Roman, serif">
+	and comparing the return value to </FONT>S3E_OS_ID_IPHONE<FONT FACE="Times New Roman, serif">
+	and </FONT>S3E_OS_ID_ANDROID<FONT FACE="Times New Roman, serif">.
+	Depending on which OS the application is running on, call
+	</FONT>s3eAdWhirlStart(&ldquo;KEY&rdquo;)<FONT FACE="Times New Roman, serif">
+	with your AdWhirl Android or iOS key in place of </FONT>KEY<FONT FACE="Times New Roman, serif">.</FONT></FONT></P>
+	<LI><P STYLE="margin-bottom: 0in"><FONT FACE="Courier New, monospace"><FONT FACE="Times New Roman, serif">You're
+	done! Ads will be served as configured in your AdWhirl control
+	panel. Call </FONT>s3eAdWhirlShow()<FONT FACE="Times New Roman, serif">
+	or </FONT>s3eAdWhirlHide()<FONT FACE="Times New Roman, serif"> if
+	you wish to show or hide the ad banner. You can also register
+	callbacks to receive notifications when an ad loads, fails, or a
+	fullscreen ad begins or ends.</FONT></FONT></P>
+</OL>
+</BODY>
+</HTML>

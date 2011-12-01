@@ -1,0 +1,14 @@
+#!/usr/bin/env mkb
+# Builder mkb file for the s3eAdWhirl extension on iphone
+
+platform IPHONE
+
+options
+{
+    lib
+    output-name="lib/iphone/libs3eAdWhirl.a"
+    output-name-debug="lib/iphone/libs3eAdWhirl_d.a"
+}
+define S3E_BUILD_EXT
+
+subproject s3eAdWhirl_build

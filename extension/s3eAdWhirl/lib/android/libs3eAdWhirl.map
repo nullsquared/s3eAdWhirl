@@ -1,0 +1,401 @@
+
+Discarded input sections
+
+ _ZN7_JNIEnv13CallIntMethodEP8_jobjectP10_jmethodIDz
+                0x00000000        0x0 release\s3eAdWhirl_platform.os
+ _ZN7_JNIEnv9NewObjectEP7_jclassP10_jmethodIDz
+                0x00000000        0x0 release\s3eAdWhirl_platform.os
+ .text          0x00000000        0x0 release\s3eAdWhirl_platform.os
+ .data          0x00000000        0x0 release\s3eAdWhirl_platform.os
+ .note.GNU-stack
+                0x00000000        0x0 release\s3eAdWhirl_platform.os
+ .text          0x00000000        0x0 release\s3eAdWhirl.os
+ .data          0x00000000        0x0 release\s3eAdWhirl.os
+ .bss           0x00000000        0x0 release\s3eAdWhirl.os
+ .note.GNU-stack
+                0x00000000        0x0 release\s3eAdWhirl.os
+ .text          0x00000000        0x0 release\s3eAdWhirl_register.os
+ .data          0x00000000        0x0 release\s3eAdWhirl_register.os
+ .bss           0x00000000        0x0 release\s3eAdWhirl_register.os
+ .text._Z21s3eAdWhirlRegisterExtv
+                0x00000000        0x0 release\s3eAdWhirl_register.os
+ .note.GNU-stack
+                0x00000000        0x0 release\s3eAdWhirl_register.os
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+LOAD release\s3eAdWhirl_platform.os
+LOAD release\s3eAdWhirl.os
+LOAD release\s3eAdWhirl_register.os
+LOAD D:\programming\marmalade_5110\s3e\edk\lib\android\libedkcore.a
+LOAD D:\programming\marmalade_5110\s3e\edk\lib\android/libplaceholderplaceholderplaceholderplaceholderplaceholder.so
+LOAD D:\programming\android-ndk-r5b\platforms\android-9\arch-arm\usr\lib/libc.so
+LOAD D:\programming\android-ndk-r5b\platforms\android-9\arch-arm\usr\lib/libm.so
+LOAD D:\programming\android-ndk-r5b\platforms\android-9\arch-arm\usr\lib/liblog.so
+LOAD D:\programming\android-ndk-r5b\platforms\android-9\arch-arm\usr\lib/libstdc++.so
+                0x000000b4                . = (0x0 + SIZEOF_HEADERS)
+
+.note.gnu.build-id
+ *(.note.gnu.build-id)
+
+.hash           0x000000b4       0x60
+ *(.hash)
+ .hash          0x000000b4       0x60 release\s3eAdWhirl_platform.os
+
+.gnu.hash
+ *(.gnu.hash)
+
+.dynsym         0x00000114      0x130
+ *(.dynsym)
+ .dynsym        0x00000114      0x130 release\s3eAdWhirl_platform.os
+
+.dynstr         0x00000244      0x10b
+ *(.dynstr)
+ .dynstr        0x00000244      0x10b release\s3eAdWhirl_platform.os
+
+.gnu.version    0x00000350        0x0 load address 0x0000034f
+ *(.gnu.version)
+ .gnu.version   0x00000000        0x0 release\s3eAdWhirl_platform.os
+
+.gnu.version_d  0x00000350        0x0 load address 0x0000034f
+ *(.gnu.version_d)
+ .gnu.version_d
+                0x00000000        0x0 release\s3eAdWhirl_platform.os
+
+.gnu.version_r  0x00000350        0x0 load address 0x0000034f
+ *(.gnu.version_r)
+ .gnu.version_r
+                0x00000000        0x0 release\s3eAdWhirl_platform.os
+
+.rel.dyn        0x00000350       0x30
+ *(.rel.init)
+ *(.rel.text .rel.text.* .rel.gnu.linkonce.t.*)
+ *(.rel.fini)
+ *(.rel.rodata .rel.rodata.* .rel.gnu.linkonce.r.*)
+ *(.rel.data.rel.ro* .rel.gnu.linkonce.d.rel.ro.*)
+ *(.rel.data .rel.data.* .rel.gnu.linkonce.d.*)
+ *(.rel.tdata .rel.tdata.* .rel.gnu.linkonce.td.*)
+ *(.rel.tbss .rel.tbss.* .rel.gnu.linkonce.tb.*)
+ *(.rel.ctors)
+ *(.rel.dtors)
+ *(.rel.got)
+ .rel.got       0x00000350       0x30 release\s3eAdWhirl_platform.os
+ *(.rel.bss .rel.bss.* .rel.gnu.linkonce.b.*)
+
+.rela.dyn
+ *(.rela.init)
+ *(.rela.text .rela.text.* .rela.gnu.linkonce.t.*)
+ *(.rela.fini)
+ *(.rela.rodata .rela.rodata.* .rela.gnu.linkonce.r.*)
+ *(.rela.data .rela.data.* .rela.gnu.linkonce.d.*)
+ *(.rela.tdata .rela.tdata.* .rela.gnu.linkonce.td.*)
+ *(.rela.tbss .rela.tbss.* .rela.gnu.linkonce.tb.*)
+ *(.rela.ctors)
+ *(.rela.dtors)
+ *(.rela.got)
+ *(.rela.bss .rela.bss.* .rela.gnu.linkonce.b.*)
+
+.rel.plt        0x00000380       0x28
+ *(.rel.plt)
+ .rel.plt       0x00000380       0x28 release\s3eAdWhirl_platform.os
+
+.rela.plt
+ *(.rela.plt)
+
+.init
+ *(.init)
+
+.plt            0x000003a8       0x50
+ *(.plt)
+ .plt           0x000003a8       0x50 release\s3eAdWhirl_platform.os
+
+.text           0x000003f8      0x638
+ *(.text .stub .text.* .gnu.linkonce.t.*)
+ .text._Z28s3eAdWhirlTerminate_platformv
+                0x000003f8        0x4 release\s3eAdWhirl_platform.os
+                0x000003f8                s3eAdWhirlTerminate_platform()
+ .text._ZN7_JNIEnv13CallIntMethodEP8_jobjectP10_jmethodIDz
+                0x000003fc       0x38 release\s3eAdWhirl_platform.os
+                0x000003fc                _JNIEnv::CallIntMethod(_jobject*, _jmethodID*, ...)
+ .text._Z24s3eAdWhirlStart_platformPKc
+                0x00000434       0x7c release\s3eAdWhirl_platform.os
+                0x00000434                s3eAdWhirlStart_platform(char const*)
+ .text._ZN7_JNIEnv9NewObjectEP7_jclassP10_jmethodIDz
+                0x000004b0       0x38 release\s3eAdWhirl_platform.os
+                0x000004b0                _JNIEnv::NewObject(_jclass*, _jmethodID*, ...)
+ .text._Z23s3eAdWhirlInit_platformv
+                0x000004e8      0x240 release\s3eAdWhirl_platform.os
+                0x000004e8                s3eAdWhirlInit_platform()
+ .text._ZL27s3eEdkAndroidFindClass_realPKc
+                0x00000728       0x5c release\s3eAdWhirl_platform.os
+ .text._Z23s3eAdWhirlHide_platformv
+                0x00000784       0x58 release\s3eAdWhirl_platform.os
+                0x00000784                s3eAdWhirlHide_platform()
+ .text._Z23s3eAdWhirlShow_platformv
+                0x000007dc       0x58 release\s3eAdWhirl_platform.os
+                0x000007dc                s3eAdWhirlShow_platform()
+ .text._Z33s3eAdWhirlRequestFreshAd_platformv
+                0x00000834       0x58 release\s3eAdWhirl_platform.os
+                0x00000834                s3eAdWhirlRequestFreshAd_platform()
+ .text.s3eAdWhirlHide
+                0x0000088c       0x10 release\s3eAdWhirl.os
+                0x0000088c                s3eAdWhirlHide
+ .text.s3eAdWhirlShow
+                0x0000089c       0x10 release\s3eAdWhirl.os
+                0x0000089c                s3eAdWhirlShow
+ .text.s3eAdWhirlRequestFreshAd
+                0x000008ac       0x10 release\s3eAdWhirl.os
+                0x000008ac                s3eAdWhirlRequestFreshAd
+ .text.s3eAdWhirlStart
+                0x000008bc       0x10 release\s3eAdWhirl.os
+                0x000008bc                s3eAdWhirlStart
+ .text._Z19s3eAdWhirlTerminatev
+                0x000008cc       0x10 release\s3eAdWhirl.os
+                0x000008cc                s3eAdWhirlTerminate()
+ .text._Z14s3eAdWhirlInitv
+                0x000008dc       0x10 release\s3eAdWhirl.os
+                0x000008dc                s3eAdWhirlInit()
+ .text.s3eAdWhirlUnRegister
+                0x000008ec       0x34 release\s3eAdWhirl_register.os
+                0x000008ec                s3eAdWhirlUnRegister
+ .text.s3eAdWhirlRegister
+                0x00000920       0x38 release\s3eAdWhirl_register.os
+                0x00000920                s3eAdWhirlRegister
+ .text.RegisterExt
+                0x00000958       0xd8 release\s3eAdWhirl_register.os
+                0x00000958                RegisterExt
+ *(.gnu.warning)
+ *(.glue_7t)
+ .glue_7t       0x00000000        0x0 linker stubs
+ *(.glue_7)
+ .glue_7        0x00000000        0x0 linker stubs
+ *(.vfp11_veneer)
+ .vfp11_veneer  0x00000000        0x0 linker stubs
+ *(.v4_bx)
+ .v4_bx         0x00000000        0x0 linker stubs
+
+.fini
+ *(.fini)
+                0x00000a30                PROVIDE (__etext, .)
+                0x00000a30                PROVIDE (_etext, .)
+                0x00000a30                PROVIDE (etext, .)
+
+.rodata         0x00000a30       0x80
+ *(.rodata .rodata.* .gnu.linkonce.r.*)
+ .rodata.str1.4
+                0x00000a30       0x80 release\s3eAdWhirl_platform.os
+ .rodata.str1.4
+                0x00000000        0xc release\s3eAdWhirl_register.os
+
+.rodata1
+ *(.rodata1)
+
+.ARM.extab
+ *(.ARM.extab* .gnu.linkonce.armextab.*)
+                0x00000ab0                __exidx_start = .
+
+.ARM.exidx
+ *(.ARM.exidx* .gnu.linkonce.armexidx.*)
+                0x00000ab0                __exidx_end = .
+
+.eh_frame_hdr
+ *(.eh_frame_hdr)
+
+.eh_frame
+ *(.eh_frame)
+
+.gcc_except_table
+ *(.gcc_except_table .gcc_except_table.*)
+                0x00000ab0                . = (ALIGN (0x1000) - ((0x1000 - .) & 0xfff))
+                0x00001ab0                . = (0x1000 DATA_SEGMENT_ALIGN 0x1000)
+
+.eh_frame
+ *(.eh_frame)
+
+.gcc_except_table
+ *(.gcc_except_table .gcc_except_table.*)
+
+.tdata
+ *(.tdata .tdata.* .gnu.linkonce.td.*)
+
+.tbss
+ *(.tbss .tbss.* .gnu.linkonce.tb.*)
+ *(.tcommon)
+
+.preinit_array
+ *(.preinit_array)
+
+.init_array
+ *(SORT(.init_array.*))
+ *(.init_array)
+
+.fini_array
+ *(.fini_array)
+ *(SORT(.fini_array.*))
+
+.ctors
+ *crtbegin.o(.ctors)
+ *crtbegin?.o(.ctors)
+ *(EXCLUDE_FILE(*crtend?.o *crtend.o) .ctors)
+ *(SORT(.ctors.*))
+ *(.ctors)
+
+.dtors
+ *crtbegin.o(.dtors)
+ *crtbegin?.o(.dtors)
+ *(EXCLUDE_FILE(*crtend?.o *crtend.o) .dtors)
+ *(SORT(.dtors.*))
+ *(.dtors)
+
+.jcr
+ *(.jcr)
+
+.data.rel.ro
+ *(.data.rel.ro.local* .gnu.linkonce.d.rel.ro.local.*)
+ *(.data.rel.ro* .gnu.linkonce.d.rel.ro.*)
+
+.dynamic        0x00001ab0       0xa0
+ *(.dynamic)
+ .dynamic       0x00001ab0       0xa0 release\s3eAdWhirl_platform.os
+                0x00001ab0                _DYNAMIC
+                0x00001b50                . = (. DATA_SEGMENT_RELRO_END 0x0)
+
+.got            0x00001b50       0x38
+ *(.got.plt)
+ .got.plt       0x00001b50       0x20 release\s3eAdWhirl_platform.os
+                0x00001b50                _GLOBAL_OFFSET_TABLE_
+ *(.got)
+ .got           0x00001b70       0x18 release\s3eAdWhirl_platform.os
+
+.data           0x00001b88        0x0
+                0x00001b88                __data_start = .
+ *(.data .data.* .gnu.linkonce.d.*)
+
+.data1
+ *(.data1)
+                0x00001b88                _edata = .
+                0x00001b88                PROVIDE (edata, .)
+                0x00001b88                __bss_start = .
+                0x00001b88                __bss_start__ = .
+
+.bss            0x00001b88       0x14
+ *(.dynbss)
+ .dynbss        0x00000000        0x0 release\s3eAdWhirl_platform.os
+ *(.bss .bss.* .gnu.linkonce.b.*)
+ .bss           0x00001b88       0x14 release\s3eAdWhirl_platform.os
+ *(COMMON)
+                0x00001b9c                . = ALIGN ((. != 0x0)?0x4:0x1)
+                0x00001b9c                _bss_end__ = .
+                0x00001b9c                __bss_end__ = .
+                0x00001b9c                . = ALIGN (0x4)
+                0x00001b9c                . = ALIGN (0x4)
+                0x00001b9c                __end__ = .
+                0x00001b9c                _end = .
+                0x00001b9c                PROVIDE (end, .)
+                0x00001b9c                . = DATA_SEGMENT_END (.)
+
+.stab
+ *(.stab)
+
+.stabstr
+ *(.stabstr)
+
+.stab.excl
+ *(.stab.excl)
+
+.stab.exclstr
+ *(.stab.exclstr)
+
+.stab.index
+ *(.stab.index)
+
+.stab.indexstr
+ *(.stab.indexstr)
+
+.comment        0x00000000       0x36
+ *(.comment)
+ .comment       0x00000000       0x12 release\s3eAdWhirl_platform.os
+ .comment       0x00000012       0x12 release\s3eAdWhirl.os
+ .comment       0x00000024       0x12 release\s3eAdWhirl_register.os
+
+.debug
+ *(.debug)
+
+.line
+ *(.line)
+
+.debug_srcinfo
+ *(.debug_srcinfo)
+
+.debug_sfnames
+ *(.debug_sfnames)
+
+.debug_aranges
+ *(.debug_aranges)
+
+.debug_pubnames
+ *(.debug_pubnames)
+
+.debug_info
+ *(.debug_info .gnu.linkonce.wi.*)
+
+.debug_abbrev
+ *(.debug_abbrev)
+
+.debug_line
+ *(.debug_line)
+
+.debug_frame
+ *(.debug_frame)
+
+.debug_str
+ *(.debug_str)
+
+.debug_loc
+ *(.debug_loc)
+
+.debug_macinfo
+ *(.debug_macinfo)
+
+.debug_weaknames
+ *(.debug_weaknames)
+
+.debug_funcnames
+ *(.debug_funcnames)
+
+.debug_typenames
+ *(.debug_typenames)
+
+.debug_varnames
+ *(.debug_varnames)
+
+.debug_pubtypes
+ *(.debug_pubtypes)
+
+.debug_ranges
+ *(.debug_ranges)
+
+.gnu.attributes
+ *(.gnu.attributes)
+
+.note.gnu.arm.ident
+ *(.note.gnu.arm.ident)
+
+/DISCARD/
+ *(.note.GNU-stack)
+ *(.gnu_debuglink)
+OUTPUT(D:\programming\marmalade_5110\extensions\s3eadwhirl\lib\android\libs3eAdWhirl.so elf32-littlearm)
+
+.ARM.attributes
+                0x00000000       0x28
+ .ARM.attributes
+                0x00000000       0x28 release\s3eAdWhirl_platform.os
+ .ARM.attributes
+                0x00000028       0x28 release\s3eAdWhirl.os
+ .ARM.attributes
+                0x00000050       0x28 release\s3eAdWhirl_register.os

@@ -1,0 +1,19 @@
+callbacks
+
+include:
+#include <s3eTypes.h>
+
+enum s3eAdWhirlCallback
+{
+	S3E_ADWHIRL_CALLBACK_AD_LOAD,
+	S3E_ADWHIRL_CALLBACK_AD_FAIL,
+	S3E_ADWHIRL_CALLBACK_FULLSCREEN_BEGIN,
+	S3E_ADWHIRL_CALLBACK_FULLSCREEN_END,
+	S3E_ADWHIRL_CALLBACK_MAX
+};
+
+functions:
+s3eResult s3eAdWhirlStart(const char* appKey) S3E_RESULT_ERROR run_on_os_thread
+s3eResult s3eAdWhirlRequestFreshAd() S3E_RESULT_ERROR run_on_os_thread
+s3eResult s3eAdWhirlShow() S3E_RESULT_ERROR run_on_os_thread
+s3eResult s3eAdWhirlHide() S3E_RESULT_ERROR run_on_os_thread

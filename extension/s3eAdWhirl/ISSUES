@@ -1,0 +1,13 @@
+Known issues:
+
+iOS
+- AdWhirl house ads icon displays at 1/2 size on retina devices
+- AdWhirl house ads crash when tapped (missing AdWhirlWebBrowser NIB)
+- Ads do not rotate when Marmalade's surface rotates (Marmalade seems to do its own rotation instead of using UIViewController's shouldAutorotateToInterfaceOrientation:, see http://www.madewithmarmalade.com/devnet/forum/6734)
+- Only built with AdMob, iAd, and AdWhirl house ads (will build with additional networks in next version)
+
+Android
+- Only built with AdMob and AdWhirl house ads (will build with additional networks in next version)
+- s3eAdWhirlRequestFreshAd() unimplemented (AdWhirl's Android SDK doesn't seem to support manually requesting fresh ads)
+- s3dAdWhirlRegister callbacks are not called (AdWhirl's Android SDK doesn't seem to support these notifications)
+
